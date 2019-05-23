@@ -144,3 +144,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clip-path: inset(100%);
   clip: rect(0 0 0);
   overflow: hidden; }
+
+html {
+  font-size: 125%; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto; }
