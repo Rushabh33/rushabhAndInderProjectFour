@@ -19,3 +19,23 @@ header {
 .nasaTitle {
     text-align: center;
 }
+
+.displayImage {
+    // max-height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // background-color: black;
+}
+
+.displayImage img {
+    object-fit: contain;
+    width: 50vw;
+    max-height: 80vh;
+}
+
+// Footer section Styles **********
+
+footer {
+    height: 20vh;
+}

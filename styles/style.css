@@ -176,3 +176,21 @@ header {
 
 .nasaTitle {
   text-align: center; }
+
+.displayImage {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.displayImage img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 50vw;
+  max-height: 80vh; }
+
+footer {
+  height: 20vh; }
