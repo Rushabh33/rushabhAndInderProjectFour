@@ -1,14 +1,21 @@
 @import "partials/setup";
 @import "partials/variables";
 
-html {
-    font-size: 125%;
-}
-
+// Universal styles**********
 .wrapper {
     width: 80%;
     margin: 0 auto;
 }
 
 
+// Header Styles **********
 
+header {
+    text-align: center;
+}
+
+// Main section Styles **********
+
+.nasaTitle {
+    text-align: center;
+}

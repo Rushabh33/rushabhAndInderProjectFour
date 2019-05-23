@@ -14,9 +14,14 @@
 //     }).then(function (result) {
 //         console.log(result)
 //         $("div").append(`<img src="${result.url}" alt=""/>`)
+//       //$("img").src=result.url
 //     });
 // };
 
+
+// Button.on(click, function(){
+//     $("img").src=result.url
+// })
 
 
 // $(function () {
