@@ -1,0 +1,41 @@
+// Color Palletes
+$primaryColor: #0A0C17;
+$secondayColor: #EFE1DA;
+$accentColor: #D5C0CF;
+$darkBlue: #090F4F;
+$lightBlue: #1E427E;
+$fontColorMain: black;
+// Fonts
+$primaryFont: "Space Mono", sans-serif;
+$secondaryFont: "Orbitron", sans-serif;
+// Font styles
+$uppercase: "uppercase";
+$capitalize: "capitalize"; 
+$none: none;
+
+
+@mixin font($sizeValuePX, $fontChoice, $transform, $fontColor) {
+    font-size: ($sizeValuePX/20) * 1rem;
+    font-family: $fontChoice;
+    text-transform: $transform;
+    color: $fontColor;
+}
+
+html {
+    font-size: 125%;
+}
+
+
+h1 {
+    @include font(100, $secondaryFont, $uppercase, $fontColorMain);
+    font-weight: 900;
+}
+
+h2 {
+    @include font(60, $primaryFont, $none, $fontColorMain);
+}
+
+p{
+    @include font(20, $primaryFont, $none, $fontColorMain);
+}
+
