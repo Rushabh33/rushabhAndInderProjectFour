@@ -1,2 +1,14 @@
 @import "partials/setup";
-@import "partials/variables"
+@import "partials/variables";
+
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
