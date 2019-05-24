@@ -161,11 +161,21 @@ h2 {
   text-transform: none;
   color: black; }
 
+h3 {
+  font-size: 1.5rem;
+  font-family: "Space Mono", sans-serif;
+  text-transform: none;
+  color: black;
+  text-align: center; }
+
 p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "Space Mono", sans-serif;
   text-transform: none;
   color: black; }
+
+i {
+  font-size: 2rem; }
 
 .wrapper {
   width: 80%;
@@ -178,19 +188,36 @@ header {
   text-align: center; }
 
 .displayImage {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
 
 .displayImage img {
   -o-object-fit: contain;
   object-fit: contain;
   width: 50vw;
   max-height: 80vh; }
+
+.shuttleArrows {
+  position: absolute;
+  top: 50%; }
+
+.shuttleArrows:first-child {
+  left: 0;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.shuttleArrows:last-child {
+  right: 0; }
+
+.infoSection {
+  max-width: 60vw;
+  margin: 0 auto; }
 
 footer {
   height: 20vh; }
