@@ -35,7 +35,15 @@ h2 {
     @include font(60, $primaryFont, $none, $fontColorMain);
 }
 
-p{
-    @include font(20, $primaryFont, $none, $fontColorMain);
+h3 {
+    @include font(30, $primaryFont, $none, $fontColorMain);
+    text-align: center;
 }
 
+p{
+    @include font(18, $primaryFont, $none, $fontColorMain);
+}
+
+i {
+    font-size: 2rem;
+}

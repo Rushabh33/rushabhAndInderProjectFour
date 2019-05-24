@@ -22,10 +22,11 @@ header {
 
 .displayImage {
     // max-height: 90vh;
-    width: 100%;
+    // width: 100%;
     display: flex;
     justify-content: center;
     // background-color: black;
+    position: relative;
 }
 
 .displayImage img {
@@ -33,6 +34,26 @@ header {
     width: 50vw;
     max-height: 80vh;
 }
+
+.shuttleArrows {
+    position: absolute;
+    top: 50%;
+}
+
+.shuttleArrows:first-child {
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.shuttleArrows:last-child {
+    right: 0;
+}
+
+.infoSection {
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
 
 // Footer section Styles **********
 
