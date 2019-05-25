@@ -8,11 +8,19 @@ myApp.todayDate = new Date();
 
 const todaysDateFormat = () => {
     let todaysFormattedYear = myApp.todayDate.getFullYear();
-    let todaysFormattedMonth = myApp.todayDate.getMonth();
-    let todaysFormattedDay = myApp.todayDate.getDay();
+    let todaysFormattedMonth = myApp.todayDate.getMonth() + 1;
+    let todaysFormattedDay = myApp.todayDate.getDay() - 1;
+
+    if (todaysFormattedMonth < 10) {
+        todaysFormattedMonth = "0" + todaysFormattedMonth;
+    }
+
+    if (todaysFormattedDay < 10) {
+        todaysFormattedDay = "2" + todaysFormattedDay;
+    }
     let todaysFormattedDate = `${todaysFormattedYear}-${todaysFormattedMonth}-${todaysFormattedDay}`
-    console.log(todaysFormattedDate)
-    myApp.userDate.val("2019-1-4");
+    // console.log(todaysFormattedDate)
+    myApp.userDate.attr(todaysFormattedDate);
 } 
 
 const ajaxCall = function () {
@@ -25,11 +33,9 @@ const ajaxCall = function () {
             date: myApp.date
         }
     }).then(function (result) {
-        // console.log(result);
         $(".displayImage img").attr("src", `${result.url}`)
         $(".infoSection h3").text(`${result.title}`)
-        $(".infoSection p").text(`${result.explanation}`)
-        
+        $(".infoSection p").text(`${result.explanation}`)   
     }); 
 }
 
@@ -44,14 +50,14 @@ const userInputChange = () => {
 // when clicked, the value from the date input is displayed in console log
 // once arrow clicked, the input type data changes to reflect the image of the day for that selected date
 
-const arrowImageChange = () => {
+const arrowImageChange = (dateChosen) => {
     $(".shuttleArrows:first-child").on("click", function () {
-        myApp.date = myApp.userDate.val(); //make this the previous day from the existing user value
+        // myApp.date = myApp.userDate.val(dateChosen);
+        
+        console.log(myApp.date) //make this the previous day from the existing user value
+        // console.log("clicked"); 
     });
 }
-
-
-
 
 
 myApp.init = function () {
@@ -59,7 +65,6 @@ ajaxCall();
 userInputChange();
 arrowImageChange();
 todaysDateFormat();
-
 };
 
 

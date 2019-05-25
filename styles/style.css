@@ -152,37 +152,54 @@ h1 {
   font-size: 5rem;
   font-family: "Orbitron", sans-serif;
   text-transform: "uppercase";
-  color: black;
+  color: white;
   font-weight: 900; }
 
 h2 {
   font-size: 3rem;
   font-family: "Space Mono", sans-serif;
   text-transform: none;
-  color: black; }
+  color: white; }
 
 h3 {
   font-size: 1.5rem;
   font-family: "Space Mono", sans-serif;
   text-transform: none;
-  color: black;
+  color: white;
   text-align: center; }
 
 p {
   font-size: 0.9rem;
   font-family: "Space Mono", sans-serif;
   text-transform: none;
-  color: black; }
+  color: white; }
 
 i {
-  font-size: 2rem; }
+  font-size: 3rem; }
+
+h1 {
+  text-shadow: 15px 15px black; }
+
+h2 {
+  text-shadow: 10px 10px black; }
+
+.infoSection {
+  color: white; }
 
 .wrapper {
   width: 80%;
   margin: 0 auto; }
 
+body {
+  background: -webkit-linear-gradient(130deg, #83178F, #4D4548, #931BB9, #18211F);
+  background: -o-linear-gradient(130deg, #83178F, #4D4548, #931BB9, #18211F);
+  background: linear-gradient(-40deg, #83178F, #4D4548, #931BB9, #18211F); }
+
 header {
   text-align: center; }
+
+#userDate {
+  margin-bottom: 5%; }
 
 .nasaTitle {
   text-align: center; }
@@ -220,4 +237,10 @@ header {
   margin: 0 auto; }
 
 footer {
-  height: 20vh; }
+  background-color: black;
+  padding: 10px;
+  font-family: "Space Mono", sans-serif; }
+
+footer p {
+  margin: 0;
+  text-align: center; }
