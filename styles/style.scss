@@ -7,6 +7,9 @@
     margin: 0 auto;
 }
 
+body {
+    background: linear-gradient(-40deg, #83178F, #4D4548, #931BB9, #18211F)
+}
 
 // Header Styles **********
 
@@ -15,6 +18,10 @@ header {
 }
 
 // Main section Styles **********
+
+#userDate {
+    margin-bottom: 5%;
+}
 
 .nasaTitle {
     text-align: center;
@@ -58,5 +65,12 @@ header {
 // Footer section Styles **********
 
 footer {
-    height: 20vh;
+    background-color: black;
+    padding: 10px;
+    font-family: $primaryFont;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
 }
