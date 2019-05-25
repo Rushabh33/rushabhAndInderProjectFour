@@ -229,9 +229,6 @@ header {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
-.shuttleArrows:last-child {
-  right: 0; }
-
 .infoSection {
   max-width: 60vw;
   margin: 0 auto; }
