@@ -6,6 +6,7 @@ $accentColor: #D5C0CF;
 $darkBlue: #090F4F;
 $lightBlue: #1E427E;
 $fontColorMain: white;
+$hoverAndfocus: rgb(255, 49, 255); 
 
 // FONTS
 
@@ -52,6 +53,15 @@ p{
 i {
     font-size: 3rem;
     color: $accentColor;
+}
+
+i:focus,
+i:hover {
+    color: $hoverAndfocus;
+}
+
+i:active {
+    color: $accentColor
 }
 
 h1{

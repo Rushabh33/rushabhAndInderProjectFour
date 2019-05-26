@@ -7,18 +7,23 @@ myApp.todayDate = new Date();
 myApp.newDate;
 myApp.todaysFormattedDate
 myApp.currentDisplayedDate;
+myApp.imgDisplay = $(".displayImage img")
+myApp.youtubeDisplay = $("iframe")
 
 const todaysDateFormat = () => {
     let todaysFormattedYear = myApp.todayDate.getFullYear();
     let todaysFormattedMonth = myApp.todayDate.getMonth() + 1;
-    let todaysFormattedDay = myApp.todayDate.getDay() - 1;
+    let todaysFormattedDay = myApp.todayDate.getDate();
+    console.log(todaysFormattedYear);
+    console.log(todaysFormattedMonth);
+    console.log(todaysFormattedDay);
 
     if (todaysFormattedMonth < 10) {
         todaysFormattedMonth = "0" + todaysFormattedMonth;
     }
 
     if (todaysFormattedDay < 10) {
-        todaysFormattedDay = "2" + todaysFormattedDay;
+        todaysFormattedDay = "0" + todaysFormattedDay;
     }
 
     myApp.todaysFormattedDate = `${todaysFormattedYear}-${todaysFormattedMonth}-${todaysFormattedDay}`
@@ -36,7 +41,18 @@ const ajaxCall = function () {
             date: myApp.date
         }
     }).then(function (result) {
-        $(".displayImage img").attr("src", `${result.url}`)
+        if (result.url.includes("youtube")){
+            myApp.imgDisplay.addClass("displayNone");
+            myApp.youtubeDisplay.removeClass("displayNone");
+            myApp.youtubeDisplay.attr("src", `${result.url}`)
+            myApp.youtubeDisplay.attr("alt", `${result.title}`)
+        } else {
+            myApp.imgDisplay.removeClass("displayNone");
+            myApp.youtubeDisplay.addClass("displayNone");
+            $(".displayImage img").attr("src", `${result.url}`)
+            $(".displayImage img").attr("alt", `${result.title}`)
+        }
+        console.log(result.url);
         $(".infoSection h3").text(`${result.title}`)
         $(".infoSection p").text(`${result.explanation}`)   
     }); 

@@ -7,6 +7,21 @@
     margin: 0 auto;
 }
 
+.skipLink {
+    position: fixed;
+    top: -100px;
+    color: $fontColorMain;
+    padding: 15px;
+    text-decoration: none;
+    background: $darkBlue;
+ }
+ 
+ .skipLink:focus {
+    top: 0;
+ }
+
+
+
 body {
     background: linear-gradient(-10deg, #83178F, $primaryColor, $lightBlue, $secondaryColor);
     animation: Gradient 4s ease infinite;
@@ -27,13 +42,17 @@ body {
     }
 }
 
-// Header Styles
+// Header Styles ***************************************************************
 
 header {
     text-align: center;
 }
 
-// Main Styles
+.displayNone {
+    display: none;
+}
+
+// Main Styles ***************************************************************
 
 #userDate {
     margin-bottom: 5%;
@@ -62,6 +81,10 @@ header {
     box-shadow: 15px 15px 10px $accentColor;
 }
 
+iframe {
+    width: 80%;
+}
+
 .shuttleArrows {
     position: absolute;
     top: 50%;
@@ -82,7 +105,7 @@ header {
 }
 
 
-// Footer Styles
+// Footer Styles ***************************************************************
 
 footer {
     background-color: black;

@@ -178,6 +178,13 @@ i {
   font-size: 3rem;
   color: #D5C0CF; }
 
+i:focus,
+i:hover {
+  color: #ff31ff; }
+
+i:active {
+  color: #D5C0CF; }
+
 h1 {
   text-shadow: 15px 15px black; }
 
@@ -190,6 +197,17 @@ h2 {
 .wrapper {
   width: 80%;
   margin: 0 auto; }
+
+.skipLink {
+  position: fixed;
+  top: -100px;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  background: #090F4F; }
+
+.skipLink:focus {
+  top: 0; }
 
 body {
   background: -webkit-linear-gradient(100deg, #83178F, #0A0C17, #1E427E, #EFE1DA);
@@ -218,6 +236,9 @@ body {
 header {
   text-align: center; }
 
+.displayNone {
+  display: none; }
+
 #userDate {
   margin-bottom: 5%; }
 
@@ -244,6 +265,9 @@ header {
   max-height: 80vh;
   -webkit-box-shadow: 15px 15px 10px #D5C0CF;
   box-shadow: 15px 15px 10px #D5C0CF; }
+
+iframe {
+  width: 80%; }
 
 .shuttleArrows {
   position: absolute;
