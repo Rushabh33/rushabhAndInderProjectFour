@@ -1,14 +1,19 @@
-// Color Palletes
+// COLOR PALLETTES
+
 $primaryColor: #0A0C17;
-$secondayColor: #EFE1DA;
+$secondaryColor: #EFE1DA;
 $accentColor: #D5C0CF;
 $darkBlue: #090F4F;
 $lightBlue: #1E427E;
 $fontColorMain: white;
-// Fonts
+
+// FONTS
+
 $primaryFont: "Space Mono", sans-serif;
 $secondaryFont: "Orbitron", sans-serif;
-// Font styles
+
+// FONT STYLES
+
 $uppercase: "uppercase";
 $capitalize: "capitalize"; 
 $none: none;
@@ -46,6 +51,7 @@ p{
 
 i {
     font-size: 3rem;
+    color: $accentColor;
 }
 
 h1{
