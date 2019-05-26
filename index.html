@@ -12,49 +12,50 @@
     
 </head>
 <body>
-<header>
-    <h1>Explore Space</h1>
-</header>
+    <a href="#title" class="skipLink">Skip To Main Content</a>
+    <header>
+        <h1>Explore Space</h1>
+    </header>
 
-<main>
-    <section>
-        <div class="nasaTitle">
-            <h2>Astronomy Picture of the Day</h2>
-        </div>
-        <div class="userInput wrapper">
-            <label for="start">Choose Date</label>
+    <main>
+        <section>
+            <div class="nasaTitle" id="title">
+                <h2>Astronomy Picture of the Day</h2>
+            </div>
+            <div class="userInput wrapper">
+                <label for="start">Choose Date</label>
 
-            <input type="date" id="userDate" name="start"
-                    value=""
-                    min="1995-06-16" max="2019-12-31">   
-        </div>
-
-        <div class="displayImage wrapper">
-            <div class="shuttleArrows">
-                <i class="fas fa-space-shuttle" tabindex="1"></i><span></span>
-                <p>Go Back</p>
+                <input type="date" id="userDate" name="start"
+                        value=""
+                        min="1995-06-16" max="2019-12-31">   
             </div>
 
-            <img src="" alt="image of the day">
-            
+            <div class="displayImage wrapper">
+                <div class="shuttleArrows">
+                    <i class="fas fa-space-shuttle" tabindex="1"></i><span></span>
+                    <p>Previous Day</p>
+                </div>
 
-        </div>
+                <img src="" alt="image of the day">
+                <iframe src="" frameborder="0" title="youtube link" width="300" height="400"></iframe>
 
-
-        <div class="infoSection">
-            <h3></h3>
-            <p></p>
-        </div>
-
-    </section>
-</main>
-
-<footer>
-    <p>Made by Rushabh Parekh and Inder Singh</p>
-</footer>
+            </div>
 
 
-<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-<script src="script.js"></script>
+            <div class="infoSection">
+                <h3></h3>
+                <p></p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Made by Rushabh Parekh and Inder Singh</p>
+    </footer>
+
+
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="script.js"></script>
 </body>
 </html>
