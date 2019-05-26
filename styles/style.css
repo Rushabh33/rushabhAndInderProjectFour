@@ -175,7 +175,8 @@ p {
   color: white; }
 
 i {
-  font-size: 3rem; }
+  font-size: 3rem;
+  color: #D5C0CF; }
 
 h1 {
   text-shadow: 15px 15px black; }
@@ -191,15 +192,39 @@ h2 {
   margin: 0 auto; }
 
 body {
-  background: -webkit-linear-gradient(130deg, #83178F, #4D4548, #931BB9, #18211F);
-  background: -o-linear-gradient(130deg, #83178F, #4D4548, #931BB9, #18211F);
-  background: linear-gradient(-40deg, #83178F, #4D4548, #931BB9, #18211F); }
+  background: -webkit-linear-gradient(100deg, #83178F, #0A0C17, #1E427E, #EFE1DA);
+  background: -o-linear-gradient(100deg, #83178F, #0A0C17, #1E427E, #EFE1DA);
+  background: linear-gradient(-10deg, #83178F, #0A0C17, #1E427E, #EFE1DA);
+  -webkit-animation: Gradient 4s ease infinite;
+  animation: Gradient 4s ease infinite;
+  background-size: 200% 200%; }
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 60%; }
+  50% {
+    background-position: 100% 60%; }
+  100% {
+    background-position: 0% 60%; } }
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 60%; }
+  50% {
+    background-position: 100% 60%; }
+  100% {
+    background-position: 0% 60%; } }
 
 header {
   text-align: center; }
 
 #userDate {
   margin-bottom: 5%; }
+
+.userInput label {
+  font-family: "Space Mono", sans-serif;
+  color: white;
+  margin-right: 20px; }
 
 .nasaTitle {
   text-align: center; }
@@ -216,8 +241,9 @@ header {
 .displayImage img {
   -o-object-fit: contain;
   object-fit: contain;
-  width: 50vw;
-  max-height: 80vh; }
+  max-height: 80vh;
+  -webkit-box-shadow: 15px 15px 10px #D5C0CF;
+  box-shadow: 15px 15px 10px #D5C0CF; }
 
 .shuttleArrows {
   position: absolute;
@@ -233,6 +259,9 @@ header {
   max-width: 60vw;
   margin: 0 auto; }
 
+.displayImage p {
+  display: none; }
+
 footer {
   background-color: black;
   padding: 10px;
@@ -241,3 +270,35 @@ footer {
 footer p {
   margin: 0;
   text-align: center; }
+
+@media (max-width: 939px) {
+  .shuttleArrows:first-child {
+    position: static; }
+  .displayImage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .infoSection {
+    padding-top: 5%; }
+  i {
+    padding-bottom: 5%;
+    margin-left: 10%; }
+  .displayImage p {
+    display: block;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); } }
+
+@media (max-width: 591px) {
+  header h1 {
+    font-size: 3rem; }
+  .nasaTitle h2 {
+    font-size: 2rem; } }
+
+@media (max-width: 480px) {
+  .displayImage img {
+    max-height: 60vh; } }

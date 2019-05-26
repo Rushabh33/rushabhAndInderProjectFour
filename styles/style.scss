@@ -8,19 +8,41 @@
 }
 
 body {
-    background: linear-gradient(-40deg, #83178F, #4D4548, #931BB9, #18211F)
+    background: linear-gradient(-10deg, #83178F, $primaryColor, $lightBlue, $secondaryColor);
+    animation: Gradient 4s ease infinite;
+    background-size: 200% 200%;
 }
 
-// Header Styles **********
+@keyframes Gradient {
+    0% {
+        background-position: 0% 60%;
+    }
+
+    50% {
+        background-position: 100% 60%
+    }
+
+    100% {
+        background-position: 0% 60%;
+    }
+}
+
+// Header Styles
 
 header {
     text-align: center;
 }
 
-// Main section Styles **********
+// Main Styles
 
 #userDate {
     margin-bottom: 5%;
+}
+
+.userInput label {
+    font-family: $primaryFont;
+    color: $fontColorMain;
+    margin-right: 20px;
 }
 
 .nasaTitle {
@@ -28,18 +50,16 @@ header {
 }
 
 .displayImage {
-    // max-height: 90vh;
-    // width: 100%;
     display: flex;
     justify-content: center;
-    // background-color: black;
     position: relative;
 }
 
 .displayImage img {
     object-fit: contain;
-    width: 50vw;
     max-height: 80vh;
+    // width: 60vw;
+    box-shadow: 15px 15px 10px $accentColor;
 }
 
 .shuttleArrows {
@@ -57,8 +77,12 @@ header {
     margin: 0 auto;
 }
 
+.displayImage p {
+    display: none;
+}
 
-// Footer section Styles **********
+
+// Footer Styles
 
 footer {
     background-color: black;
@@ -69,4 +93,44 @@ footer {
 footer p {
     margin: 0;
     text-align: center;
+}
+
+@media (max-width: 939px) {
+   .shuttleArrows:first-child {
+       position: static;
+   }
+
+   .displayImage {
+       flex-direction: column-reverse;
+       align-items: center;
+   }
+
+   .infoSection {
+       padding-top: 5%;
+   }
+
+   i {
+       padding-bottom: 5%;
+       margin-left: 10%;
+   }
+
+   .displayImage p {
+       display: block;
+       transform: rotate(180deg)
+   }
+}
+   @media (max-width: 591px) {
+       header h1 {
+           font-size: 3rem;
+       }
+
+       .nasaTitle h2 {
+           font-size: 2rem;
+       }
+}
+
+@media (max-width: 480px) {
+    .displayImage img {
+        max-height: 60vh;
+    }
 }
