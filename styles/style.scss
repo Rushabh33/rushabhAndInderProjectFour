@@ -118,12 +118,17 @@ footer p {
     text-align: center;
 }
 
-@media (max-width: 939px) {
-   .shuttleArrows:first-child {
-       position: static;
-   }
+@media (max-width: 1180px) {
+    .shuttleArrows {
+        position: static;
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+}
 
-   .displayImage {
+@media (max-width: 939px) {
+    .displayImage {
        flex-direction: column-reverse;
        align-items: center;
    }
