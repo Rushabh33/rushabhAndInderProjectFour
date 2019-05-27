@@ -147,18 +147,28 @@ footer p {
        transform: rotate(180deg)
    }
 }
-   @media (max-width: 591px) {
-       header h1 {
-           font-size: 3rem;
-       }
+   @media (max-width: 600px) {
+    .wrapper {
+        width: 90%;
+    }
+    
+    .displayImage img, 
+    iframe { 
+        width: 100%;  
+        box-shadow: 0px 0px 15px $accentColor;  
+    }
+    
+    header h1 {
+        font-size: 3rem;
+    }
 
-       .nasaTitle h2 {
-           font-size: 2rem;
-       }
+    .nasaTitle h2 {
+        font-size: 2rem;
+    }
 
-       .infoSection {
-           max-width: 90%;
-       }
+    .infoSection {
+        max-width: 90%;
+    }
 }
 
 @media (max-width: 480px) {
