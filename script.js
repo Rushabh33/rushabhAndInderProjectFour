@@ -74,6 +74,7 @@ const getAjaxWithNewDate = () => {
     //2 things after: we have to update the input value && update myApp.date for the ajax Call
     // updating myApp.date
     myApp.date = myApp.newDate
+    console.log(myApp.date)
     // updating the input value
     myApp.userDate.val(myApp.date);
     ajaxCall();
@@ -87,11 +88,18 @@ const arrowImageChange = () => {
         let date = myApp.userDate.val();
         date = date.split("-");
         let newYear = date[0];
+        console.log(newYear)
+
         let newMonth = date[1];
+        console.log(newMonth)
         let newDay = date[2];
+        console.log(newDay)
         // all the if statememts for when forward or back in time
         //  NOT A LEAP YEAR CONDITIONS *********************************
         if (newYear % 4 != 0 && newYear % 100 == 0 || newYear % 400 != 0){
+            console.log("not a leap")
+            console.log(newYear)
+            console.log(newMonth)
             //CONDITION: beginning of year 
             if (newMonth == 01 && newDay == 01){
                 myApp.newDate = `${Number(newYear) - 1}-${12}-${31}`
@@ -104,6 +112,7 @@ const arrowImageChange = () => {
             }
             //CONDITION: If the PREVIOUS month has 30 DAYS
             else if (newMonth == 01 || newMonth == 03 || newMonth == 05 || newMonth == 07 || newMonth == "08" || newMonth == 10|| newMonth == 12){
+                console.log("here")
                 if (newDay == 01){
                     if (newMonth < 10) {
                         newMonth = "0" + (newMonth - 1);
@@ -120,10 +129,11 @@ const arrowImageChange = () => {
                     }
                     myApp.newDate = `${newYear}-${(newMonth)}-${newDay}`
                     getAjaxWithNewDate();
+                    console.log(myApp.newDate)
                 }
             }
             //CONDITION: If the PREVIOUS month has 31 DAYS
-            else if (newMonth == 02 || newMonth == 04 || newMonth == "09" || newMonth == 11){
+            else if (newMonth == 02 || newMonth == 04 || newMonth == 06 || newMonth == "09" || newMonth == 11){
                 if (newDay == 01){
                     if (newMonth < 10) {
                         newMonth = "0" + (newMonth - 1);
@@ -144,7 +154,10 @@ const arrowImageChange = () => {
             }
         }
         // given that it is a LEAP YEAR *********************************
-        else if (newYear % 4 == 0 && newYear % 100 != 0 || newYear % 400 == 0){   
+        else if (newYear % 4 == 0 && newYear % 100 != 0 || newYear % 400 == 0){  
+                console.log("not leap") 
+                console.log(newMonth) 
+
                 //CONDITION: beginning of year 
                 if (newMonth == 01 && newDay == 01){
                     myApp.newDate = `${Number(newYear) - 1}-${12}-${31}`
@@ -176,7 +189,7 @@ const arrowImageChange = () => {
                     }
                 }
                 //CONDITION: If the PREVIOUS month has 31 DAYS
-                else if (newMonth == 02 || newMonth == 04 || newMonth == "09" || newMonth == 11){
+                else if (newMonth == 02 || newMonth == 04 || newMonth == 06 || newMonth == "09" || newMonth == 11){
                     if (newDay == 01){
                         if (newMonth < 10) {
                             newMonth = "0" + (newMonth - 1);
